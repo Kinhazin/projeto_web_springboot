@@ -1,24 +1,29 @@
 import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/esm/Button';
 
-function ModalExcluir(){
-    return(
+function ModalExcluir() {
+  return (
     <>
       <Modal.Dialog>
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Excluir produto</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>Modal body text goes here.</p>
+          <p>Deseja excluir o produto?</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancelar
+          </Button>
+          <Button type='submit' variant="danger">
+            excluir
+          </Button>
         </Modal.Footer>
       </Modal.Dialog>
     </>
-    )
+  )
 }
 
 export default ModalExcluir;
